@@ -17,6 +17,10 @@ h1, h2, h3, h4, button {
   letter-spacing: 2px;
 }
 
+li {
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
   font-size: 11px;
@@ -85,8 +89,6 @@ a {
   margin-top: 50px;
   max-width: 1440px;
   margin-bottom: 175px;
-  margin-left: 12px;
-  margin-right: 12px;
 }
 
 .featured-row, .small-feature-module {
@@ -239,10 +241,50 @@ a {
 }
 
 .menu {
+  ul {
+    overflow: hidden;
+  }
   li {
   margin-right: 5px;
   }
 }
+
+.submenu {
+  width: 80%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  li:hover {
+    color: saturate(blue, 50%);
+  }
+}
+
+
+
+#womens {
+  display: none;
+  position: absolute;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  top: 50px;
+  right: 25%;
+  height: 50px;
+  background-color: #fff;
+  border: #eee solid 1px;
+}
+
+#womens-tab:hover, .submenu:hover {
+  #womens {
+  display: flex;
+  }
+}
+
+.menu, .menu-ul {
+  height: 80%;
+}
+
 
 .logo {
   display: block;
@@ -258,6 +300,13 @@ a {
   font-size: 22px;
   font-weight: lighter;
   display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .main-body {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
 }
 
 @media screen and (max-width: 1080px) {
